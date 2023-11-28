@@ -1,0 +1,50 @@
+<test name="Test1" >
+		<classes > 
+			<class name="r2.LoadTheSite" />
+		</classes>
+</test> 
+<test name="Test2" >
+		<classes > 
+			<class name="r2.LoadTheSite" />
+		</classes>
+</test> 
+<test name="Test3" >
+		<classes > 
+			<class name="r2.LoadTheSite" />
+		</classes>
+</test> 
+<test name="Test4" >
+		<classes > 
+			<class name="r2.LoadTheSite" />
+		</classes>
+</test> 
+<test name="Test5" >
+		<classes > 
+			<class name="r2.LoadTheSite" />
+		</classes>
+</test> 
+<test name="Test6" >
+		<classes > 
+			<class name="r2.LoadTheSite" />
+		</classes>
+</test> 
+<test name="Test7" >
+		<classes > 
+			<class name="r2.LoadTheSite" />
+		</classes>
+</test> 
+<test name="Test8" >
+		<classes > 
+			<class name="r2.LoadTheSite" />
+		</classes>
+</test> 
+<test name="Test9" >
+		<classes > 
+			<class name="r2.LoadTheSite" />
+		</classes>
+</test> 
+<test name="Test10" >
+		<classes > 
+			<class name="r2.LoadTheSite" />
+		</classes>
+</test> 

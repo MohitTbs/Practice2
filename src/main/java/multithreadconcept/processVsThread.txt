@@ -1,0 +1,54 @@
+Process:
+-----------
+1. A program which is in executing state
+2. It is heavy weight 
+3. Context-Switching: switching of the cpu from one process to another such as that it 
+might feel like the cpu is exectuting multiple task simultaneously
+--- Context-Switching takes more time
+4. Communication: takes more time for inter process communication
+5. Address Space: each process has different address space
+6. Dependency: do not depend on each other
+7. Synchronization: No need
+8. Resources Consumption: more
+9. Time of Creation : more time 
+10. Time for termination: more time 
+
+---------
+Thread:
+-----------
+1. It is a sub part(small task) part of process
+2. It is light weight 
+3. Context-Switching takes less time
+4. Communication: takes more time for inter thread communication
+5. Address Space:  threads share same address space
+6. Dependency: threads depend on each other
+7. Synchronization: We need it beacause multiple threads accessing the same resources
+can corrupt the file
+8. Resources Consumption: less
+9. Time of Creation : less time 
+10. Time for termination: less time 
+
+
+---------------------------------------------------------------
+2 ways to create thread
+1. Thread (class)  --java.lang
+2. Runnable (Interface) --java.lang
+----------------------------------------------------------
+Thread Life Cycle: Using Thread Class
+1. Create a thread
+2. Runnable -> thread.start() caused it.
+3. Running -> Jvm will allocate the processor to the thread
+-- It can go to non runnable state
+-- It will have to again go to runnable stage
+4. Dead -> when task is completed
+
+
+--------------------------------------------------------------
+
+
+
+
+
+
+
+
