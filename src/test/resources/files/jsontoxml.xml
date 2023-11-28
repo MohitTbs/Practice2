@@ -1,0 +1,481 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<root>
+	<responseStatus>1</responseStatus>
+	<responseMessage />
+	<responseData>
+		<areaName>Bankruptcy</areaName>
+		<parentId>79</parentId>
+		<areaOfLaws>
+			<areaId>80</areaId>
+			<areaName>Commercial</areaName>
+			<parent>79</parent>
+			<parentId />
+		</areaOfLaws>
+		<areaOfLaws>
+			<areaId>81</areaId>
+			<areaName>Consumer</areaName>
+			<parent>79</parent>
+			<parentId />
+		</areaOfLaws>
+		<areaOfLawModelCustoms />
+	</responseData>
+	<responseData>
+		<areaName>Business Agreements</areaName>
+		<parentId>2</parentId>
+		<areaOfLaws>
+			<areaId>21</areaId>
+			<areaName>Asset Purchase Agreement</areaName>
+			<parent>2</parent>
+			<parentId />
+		</areaOfLaws>
+		<areaOfLaws>
+			<areaId>20</areaId>
+			<areaName>Business Entity Purchase Agreement</areaName>
+			<parent>2</parent>
+			<parentId />
+		</areaOfLaws>
+		<areaOfLaws>
+			<areaId>17</areaId>
+			<areaName>Buy-Sell Agreement</areaName>
+			<parent>2</parent>
+			<parentId />
+		</areaOfLaws>
+		<areaOfLaws>
+			<areaId>19</areaId>
+			<areaName>Bylaws</areaName>
+			<parent>2</parent>
+			<parentId />
+		</areaOfLaws>
+		<areaOfLaws>
+			<areaId>18</areaId>
+			<areaName>Company Agreement</areaName>
+			<parent>2</parent>
+			<parentId />
+		</areaOfLaws>
+		<areaOfLaws>
+			<areaId>16</areaId>
+			<areaName>Shareholder Agreement</areaName>
+			<parent>2</parent>
+			<parentId />
+		</areaOfLaws>
+		<areaOfLawModelCustoms />
+	</responseData>
+	<responseData>
+		<areaName>Business Entity Formation</areaName>
+		<parentId>1</parentId>
+		<areaOfLaws>
+			<areaId>9</areaId>
+			<areaName>Corporation (Inc.)</areaName>
+			<parent>1</parent>
+			<parentId />
+		</areaOfLaws>
+		<areaOfLaws>
+			<areaId>15</areaId>
+			<areaName>General Partnership</areaName>
+			<parent>1</parent>
+			<parentId />
+		</areaOfLaws>
+		<areaOfLaws>
+			<areaId>10</areaId>
+			<areaName>Limited Liability Company (L.L.C.)</areaName>
+			<parent>1</parent>
+			<parentId />
+		</areaOfLaws>
+		<areaOfLaws>
+			<areaId>12</areaId>
+			<areaName>Limited Liability Partnership (L.L.P.)</areaName>
+			<parent>1</parent>
+			<parentId />
+		</areaOfLaws>
+		<areaOfLaws>
+			<areaId>11</areaId>
+			<areaName>Limited Partnership (L.P.)</areaName>
+			<parent>1</parent>
+			<parentId />
+		</areaOfLaws>
+		<areaOfLaws>
+			<areaId>13</areaId>
+			<areaName>Professional Association (P.A.)</areaName>
+			<parent>1</parent>
+			<parentId />
+		</areaOfLaws>
+		<areaOfLaws>
+			<areaId>14</areaId>
+			<areaName>Professional Corporation (P.C.)</areaName>
+			<parent>1</parent>
+			<parentId />
+		</areaOfLaws>
+		<areaOfLawModelCustoms />
+	</responseData>
+	<responseData>
+		<areaName>Criminal Law</areaName>
+		<parentId>3</parentId>
+		<areaOfLaws>
+			<areaId>22</areaId>
+			<areaName>Assault</areaName>
+			<parent>3</parent>
+			<parentId />
+		</areaOfLaws>
+		<areaOfLaws>
+			<areaId>23</areaId>
+			<areaName>Assault Family Violence</areaName>
+			<parent>3</parent>
+			<parentId />
+		</areaOfLaws>
+		<areaOfLaws>
+			<areaId>24</areaId>
+			<areaName>Burglary of a Habitation</areaName>
+			<parent>3</parent>
+			<parentId />
+		</areaOfLaws>
+		<areaOfLaws>
+			<areaId>25</areaId>
+			<areaName>Burglary of a Vehicle</areaName>
+			<parent>3</parent>
+			<parentId />
+		</areaOfLaws>
+		<areaOfLaws>
+			<areaId>26</areaId>
+			<areaName>Conspiracy</areaName>
+			<parent>3</parent>
+			<parentId />
+		</areaOfLaws>
+		<areaOfLaws>
+			<areaId>30</areaId>
+			<areaName>Domestic Violence</areaName>
+			<parent>3</parent>
+			<parentId />
+		</areaOfLaws>
+		<areaOfLaws>
+			<areaId>32</areaId>
+			<areaName>Drug Crimes - Felony</areaName>
+			<parent>3</parent>
+			<parentId />
+		</areaOfLaws>
+		<areaOfLaws>
+			<areaId>31</areaId>
+			<areaName>Drug Crimes - Misdemeanor</areaName>
+			<parent>3</parent>
+			<parentId />
+		</areaOfLaws>
+		<areaOfLaws>
+			<areaId>29</areaId>
+			<areaName>DWI / DUI - Child Under 15 Felony</areaName>
+			<parent>3</parent>
+			<parentId />
+		</areaOfLaws>
+		<areaOfLaws>
+			<areaId>28</areaId>
+			<areaName>DWI / DUI - Felony</areaName>
+			<parent>3</parent>
+			<parentId />
+		</areaOfLaws>
+		<areaOfLaws>
+			<areaId>27</areaId>
+			<areaName>DWI / DUI - Misdemeanor</areaName>
+			<parent>3</parent>
+			<parentId />
+		</areaOfLaws>
+		<areaOfLaws>
+			<areaId>33</areaId>
+			<areaName>Expungements</areaName>
+			<parent>3</parent>
+			<parentId />
+		</areaOfLaws>
+		<areaOfLaws>
+			<areaId>34</areaId>
+			<areaName>Failure to Stop and Render Aide</areaName>
+			<parent>3</parent>
+			<parentId />
+		</areaOfLaws>
+		<areaOfLaws>
+			<areaId>35</areaId>
+			<areaName>Internet Crimes</areaName>
+			<parent>3</parent>
+			<parentId />
+		</areaOfLaws>
+		<areaOfLaws>
+			<areaId>36</areaId>
+			<areaName>Misdemeanors</areaName>
+			<parent>3</parent>
+			<parentId />
+		</areaOfLaws>
+		<areaOfLaws>
+			<areaId>37</areaId>
+			<areaName>Motor Vehicle Crimes / Tickets</areaName>
+			<parent>3</parent>
+			<parentId />
+		</areaOfLaws>
+		<areaOfLaws>
+			<areaId>38</areaId>
+			<areaName>Probation Violations</areaName>
+			<parent>3</parent>
+			<parentId />
+		</areaOfLaws>
+		<areaOfLaws>
+			<areaId>39</areaId>
+			<areaName>Restraining Orders</areaName>
+			<parent>3</parent>
+			<parentId />
+		</areaOfLaws>
+		<areaOfLaws>
+			<areaId>41</areaId>
+			<areaName>Theft Crimes - Felony</areaName>
+			<parent>3</parent>
+			<parentId />
+		</areaOfLaws>
+		<areaOfLaws>
+			<areaId>40</areaId>
+			<areaName>Theft Crimes - Misdemeanor</areaName>
+			<parent>3</parent>
+			<parentId />
+		</areaOfLaws>
+		<areaOfLaws>
+			<areaId>42</areaId>
+			<areaName>Violation of a Protective Order</areaName>
+			<parent>3</parent>
+			<parentId />
+		</areaOfLaws>
+		<areaOfLaws>
+			<areaId>43</areaId>
+			<areaName>Violent Crimes</areaName>
+			<parent>3</parent>
+			<parentId />
+		</areaOfLaws>
+		<areaOfLaws>
+			<areaId>44</areaId>
+			<areaName>White Collar Crimes</areaName>
+			<parent>3</parent>
+			<parentId />
+		</areaOfLaws>
+		<areaOfLawModelCustoms />
+	</responseData>
+	<responseData>
+		<areaName>Family Law</areaName>
+		<parentId>4</parentId>
+		<areaOfLaws>
+			<areaId>46</areaId>
+			<areaName>Child Custody</areaName>
+			<parent>4</parent>
+			<parentId />
+		</areaOfLaws>
+		<areaOfLaws>
+			<areaId>47</areaId>
+			<areaName>Child Support</areaName>
+			<parent>4</parent>
+			<parentId />
+		</areaOfLaws>
+		<areaOfLaws>
+			<areaId>45</areaId>
+			<areaName>Divorce</areaName>
+			<parent>4</parent>
+			<parentId />
+		</areaOfLaws>
+		<areaOfLaws>
+			<areaId>49</areaId>
+			<areaName>Paternity</areaName>
+			<parent>4</parent>
+			<parentId />
+		</areaOfLaws>
+		<areaOfLaws>
+			<areaId>48</areaId>
+			<areaName>Spousal Support</areaName>
+			<parent>4</parent>
+			<parentId />
+		</areaOfLaws>
+		<areaOfLawModelCustoms />
+	</responseData>
+	<responseData>
+		<areaName>Immigration Law</areaName>
+		<parentId>73</parentId>
+		<areaOfLaws>
+			<areaId>74</areaId>
+			<areaName>Citizenship/Naturalization</areaName>
+			<parent>73</parent>
+			<parentId />
+		</areaOfLaws>
+		<areaOfLaws>
+			<areaId>75</areaId>
+			<areaName>Family-based Immigration</areaName>
+			<parent>73</parent>
+			<parentId />
+		</areaOfLaws>
+		<areaOfLaws>
+			<areaId>76</areaId>
+			<areaName>Fiance Visas</areaName>
+			<parent>73</parent>
+			<parentId />
+		</areaOfLaws>
+		<areaOfLaws>
+			<areaId>77</areaId>
+			<areaName>Permanent Residency</areaName>
+			<parent>73</parent>
+			<parentId />
+		</areaOfLaws>
+		<areaOfLawModelCustoms />
+	</responseData>
+	<responseData>
+		<areaName>Intellectual Property Contracts</areaName>
+		<parentId>5</parentId>
+		<areaOfLaws>
+			<areaId>50</areaId>
+			<areaName>Copyright</areaName>
+			<parent>5</parent>
+			<parentId />
+		</areaOfLaws>
+		<areaOfLaws>
+			<areaId>52</areaId>
+			<areaName>Patent</areaName>
+			<parent>5</parent>
+			<parentId />
+		</areaOfLaws>
+		<areaOfLaws>
+			<areaId>51</areaId>
+			<areaName>Trademark</areaName>
+			<parent>5</parent>
+			<parentId />
+		</areaOfLaws>
+		<areaOfLawModelCustoms />
+	</responseData>
+	<responseData>
+		<areaName>Litigation</areaName>
+		<parentId>6</parentId>
+		<areaOfLaws>
+			<areaId>54</areaId>
+			<areaName>Breach of Contract</areaName>
+			<parent>6</parent>
+			<parentId />
+		</areaOfLaws>
+		<areaOfLaws>
+			<areaId>56</areaId>
+			<areaName>Breach of Fiduciary Duty</areaName>
+			<parent>6</parent>
+			<parentId />
+		</areaOfLaws>
+		<areaOfLaws>
+			<areaId>53</areaId>
+			<areaName>Business</areaName>
+			<parent>6</parent>
+			<parentId />
+		</areaOfLaws>
+		<areaOfLaws>
+			<areaId>57</areaId>
+			<areaName>Employment</areaName>
+			<parent>6</parent>
+			<parentId />
+		</areaOfLaws>
+		<areaOfLaws>
+			<areaId>62</areaId>
+			<areaName>Family Law Litigation</areaName>
+			<parent>6</parent>
+			<parentId />
+		</areaOfLaws>
+		<areaOfLaws>
+			<areaId>55</areaId>
+			<areaName>Fraud</areaName>
+			<parent>6</parent>
+			<parentId />
+		</areaOfLaws>
+		<areaOfLaws>
+			<areaId>59</areaId>
+			<areaName>Intellectual Property</areaName>
+			<parent>6</parent>
+			<parentId />
+		</areaOfLaws>
+		<areaOfLaws>
+			<areaId>63</areaId>
+			<areaName>Personal Injury</areaName>
+			<parent>6</parent>
+			<parentId />
+		</areaOfLaws>
+		<areaOfLaws>
+			<areaId>58</areaId>
+			<areaName>Real Estate</areaName>
+			<parent>6</parent>
+			<parentId />
+		</areaOfLaws>
+		<areaOfLaws>
+			<areaId>60</areaId>
+			<areaName>Shareholder / Partnership / Membership</areaName>
+			<parent>6</parent>
+			<parentId />
+		</areaOfLaws>
+		<areaOfLaws>
+			<areaId>61</areaId>
+			<areaName>Small Claims</areaName>
+			<parent>6</parent>
+			<parentId />
+		</areaOfLaws>
+		<areaOfLaws>
+			<areaId>64</areaId>
+			<areaName>Wills / Probate</areaName>
+			<parent>6</parent>
+			<parentId />
+		</areaOfLaws>
+		<areaOfLawModelCustoms />
+	</responseData>
+	<responseData>
+		<areaName>Real Estate Contracts</areaName>
+		<parentId>7</parentId>
+		<areaOfLaws>
+			<areaId>66</areaId>
+			<areaName>Lease</areaName>
+			<parent>7</parent>
+			<parentId />
+		</areaOfLaws>
+		<areaOfLaws>
+			<areaId>65</areaId>
+			<areaName>Purchase</areaName>
+			<parent>7</parent>
+			<parentId />
+		</areaOfLaws>
+		<areaOfLawModelCustoms />
+	</responseData>
+	<responseData>
+		<areaName>Wills / Probate</areaName>
+		<parentId>8</parentId>
+		<areaOfLaws>
+			<areaId>72</areaId>
+			<areaName>Durable Power of Attorney</areaName>
+			<parent>8</parent>
+			<parentId />
+		</areaOfLaws>
+		<areaOfLaws>
+			<areaId>69</areaId>
+			<areaName>HIPPA Authorization</areaName>
+			<parent>8</parent>
+			<parentId />
+		</areaOfLaws>
+		<areaOfLaws>
+			<areaId>70</areaId>
+			<areaName>Living Will / Directive to Physicians</areaName>
+			<parent>8</parent>
+			<parentId />
+		</areaOfLaws>
+		<areaOfLaws>
+			<areaId>71</areaId>
+			<areaName>Medical / Health Care Power of Attorney</areaName>
+			<parent>8</parent>
+			<parentId />
+		</areaOfLaws>
+		<areaOfLaws>
+			<areaId>68</areaId>
+			<areaName>Probate Will</areaName>
+			<parent>8</parent>
+			<parentId />
+		</areaOfLaws>
+		<areaOfLaws>
+			<areaId>78</areaId>
+			<areaName>Special Needs Trust</areaName>
+			<parent>8</parent>
+			<parentId />
+		</areaOfLaws>
+		<areaOfLaws>
+			<areaId>67</areaId>
+			<areaName>Will Drafting</areaName>
+			<parent>8</parent>
+			<parentId />
+		</areaOfLaws>
+		<areaOfLawModelCustoms />
+	</responseData>
+</root>
