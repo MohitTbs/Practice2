@@ -12,11 +12,11 @@ import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
 
-import atu.testrecorder.ATUTestRecorder;
-import atu.testrecorder.exceptions.ATUTestRecorderException;
+//import atu.testrecorder.ATUTestRecorder;
+//import atu.testrecorder.exceptions.ATUTestRecorderException;
 
 public class VideoRecordSelenium {
-
+/*
 	WebDriver driver;
 	ATUTestRecorder recorder;
 	
@@ -56,5 +56,5 @@ public class VideoRecordSelenium {
 
 		String txt = e3.findElement(By.cssSelector("div:nth-child(2) > h2")).getText();
 		System.out.println(txt);
-	}
+	}*/
 }
