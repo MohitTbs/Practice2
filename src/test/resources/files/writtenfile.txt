@@ -1,50 +1,110 @@
-<test name="Test1" >
-		<classes > 
-			<class name="r2.LoadTheSite" />
-		</classes>
-</test> 
-<test name="Test2" >
-		<classes > 
-			<class name="r2.LoadTheSite" />
-		</classes>
-</test> 
-<test name="Test3" >
-		<classes > 
-			<class name="r2.LoadTheSite" />
-		</classes>
-</test> 
-<test name="Test4" >
-		<classes > 
-			<class name="r2.LoadTheSite" />
-		</classes>
-</test> 
-<test name="Test5" >
-		<classes > 
-			<class name="r2.LoadTheSite" />
-		</classes>
-</test> 
-<test name="Test6" >
-		<classes > 
-			<class name="r2.LoadTheSite" />
-		</classes>
-</test> 
-<test name="Test7" >
-		<classes > 
-			<class name="r2.LoadTheSite" />
-		</classes>
-</test> 
-<test name="Test8" >
-		<classes > 
-			<class name="r2.LoadTheSite" />
-		</classes>
-</test> 
-<test name="Test9" >
-		<classes > 
-			<class name="r2.LoadTheSite" />
-		</classes>
-</test> 
-<test name="Test10" >
-		<classes > 
-			<class name="r2.LoadTheSite" />
-		</classes>
-</test> 
+Res: 200 https://www.google.com/recaptcha/api2/bframe?hl=en&v=u-xcq3POCWFlCr3x8_IPxgPu&k=6LdWgikUAAAAAJ8cSDwB3k1ypUceSuWlYxTY8jmZ
+Res: 200 https://apps.timeclockwizard.com/
+Res: 200 https://apps.timeclockwizard.com/assets/images/flag-us1.png
+Res: 200 https://apps.timeclockwizard.com/assets/images/language.png
+Res: 200 data:image/jpeg;base64,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
+Res: 200 https://fonts.googleapis.com/css?family=Cabin:400,600,700|Open+Sans:400,600
+Res: 200 https://apps.timeclockwizard.com/assets/images/flag-es.png
+Res: 200 https://apps.timeclockwizard.com/img/sidebar_menu_ico_schedule.svg
+Res: 200 https://apps.timeclockwizard.com/Content/QuickAccountSetup/addemployee.css?v=25.87
+Res: 200 https://apps.timeclockwizard.com/img/paypal-icon-new.png
+Res: 200 https://apps.timeclockwizard.com/img/user_menu_password.svg
+Res: 200 https://apps.timeclockwizard.com/video/ico-baner-1.svg
+Res: 200 https://apps.timeclockwizard.com/img/user_menu_profile.svg
+Res: 200 https://apps.timeclockwizard.com/video/ico-baner-3.svg
+Res: 200 https://apps.timeclockwizard.com/img/sidebar_menu_ico_timesheet.svg
+Res: 200 https://apps.timeclockwizard.com/img/user_menu_calendar.svg
+Res: 200 https://apps.timeclockwizard.com/img/time_card_laptop.svg
+Res: 200 https://apps.timeclockwizard.com/Content/font-awesome.min.css
+Res: 200 https://apps.timeclockwizard.com/img/time_card_time.svg
+Res: 200 https://apps.timeclockwizard.com/img/sidebar_menu_ico_dashboard.svg
+Res: 200 https://apps.timeclockwizard.com/Content/VideoNotification/VideoNotification.css
+Res: 200 https://apps.timeclockwizard.com/img/print.svg
+Res: 200 https://apps.timeclockwizard.com/img/sidebar_menu_ico_payroll.svg
+Res: 200 https://apps.timeclockwizard.com/img/sidebar_menu_ico_employee.svg
+Res: 200 https://apps.timeclockwizard.com/img/sidebar_menu_ico_reports.svg
+Res: 200 https://apps.timeclockwizard.com/img/meeting_head_edit.svg
+Res: 200 https://apps.timeclockwizard.com/img/time_card_verify.svg
+Res: 200 https://apps.timeclockwizard.com/assets/images/clover-new.png
+Res: 200 https://apps.timeclockwizard.com/img/Logo_T1.png
+Res: 200 https://apps.timeclockwizard.com/video/ico-baner-2.svg
+Res: 200 https://apps.timeclockwizard.com/img/sidebar_menu_ico_tasks.svg
+Res: 200 https://apps.timeclockwizard.com/img/livestream.svg
+Res: 200 https://apps.timeclockwizard.com/assets/images/Execupay_white.png
+Res: 200 https://apps.timeclockwizard.com/img/sidebar_menu_ico_settings.svg
+Res: 200 https://apps.timeclockwizard.com/img/user_menu_settings.svg
+Res: 200 https://apps.timeclockwizard.com/img/user_menu_messages.svg
+Res: 200 https://apps.timeclockwizard.com/img/user_menu_logout.svg
+Res: 200 https://apps.timeclockwizard.com/img/wall-clock.png
+Res: 200 https://apps.timeclockwizard.com/img/opengraph-xero3.png
+Res: 200 https://apps.timeclockwizard.com/img/sidebar_menu_ico_support.svg
+Res: 200 https://apps.timeclockwizard.com/img/livestream_active.svg
+Res: 200 https://apps.timeclockwizard.com/img/esc.svg
+Res: 200 https://apps.timeclockwizard.com/cdn-cgi/scripts/7d0fa10a/cloudflare-static/rocket-loader.min.js
+Res: 200 https://static.cloudflareinsights.com/beacon.min.js/v84a3a4012de94ce1a686ba8c167c359c1696973893317
+Res: 200 https://apps.timeclockwizard.com/img/woman_small.png
+Res: 200 https://apps.timeclockwizard.com/img/cal.svg
+Res: 200 https://apps.timeclockwizard.com/Content/listtaskcss?v=25.87
+Res: 200 https://apps.timeclockwizard.com/assets/images/QuickBooksLogo.png
+Res: 200 https://apps.timeclockwizard.com/assets/images/paypal_masspayment.png
+Res: 200 https://apps.timeclockwizard.com/assets/images/Execupay_blue.png
+Res: 200 https://apps.timeclockwizard.com/assets/images/QB_Logo.png
+Res: 200 https://apps.timeclockwizard.com/Content/main_Clipone.css?v=6.5
+Res: 200 https://apps.timeclockwizard.com/Content/Layoutcss?v=25.87
+Res: 200 https://fonts.googleapis.com/css?family=Cabin:600,700&display=swap
+Res: 200 https://apps.timeclockwizard.com/Content/_LayoutCshtmlcss?v=25.87
+Res: 200 https://apps.timeclockwizard.com/Content/SaveMoneyNotification?v=25.87
+Res: 200 https://newtcwbucket.s3.us-east-2.amazonaws.com/tcw/Usersfiles/Avtars/2020/11052020/213376/884689/avatar_big.png?X-Amz-Expires=604800&X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=AKIAIUKI2RVHZNYW6SVQ/20231212/us-east-2/s3/aws4_request&X-Amz-Date=20231212T002608Z&X-Amz-SignedHeaders=host&X-Amz-Signature=56e2493cf9cdb88fe0528e4252d245cf78326a9119a5e8b0b3c68b4a832f8331
+Res: 200 https://newtcwbucket.s3.us-east-2.amazonaws.com/tcw/Usersfiles/Avtars/2021/07012021/213376/1195989/avatar_big.png?X-Amz-Expires=604800&X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=AKIAIUKI2RVHZNYW6SVQ/20231211/us-east-2/s3/aws4_request&X-Amz-Date=20231211T002607Z&X-Amz-SignedHeaders=host&X-Amz-Signature=22f0e635c2fc5f1fed861adfc3ae0201a34430a80880c0288a3ea1a24f00f587
+Res: 200 https://newtcwbucket.s3.us-east-2.amazonaws.com/tcw/Usersfiles/Avtars/2023/04052023/213376/1345418/avatar_big.png?X-Amz-Expires=604800&X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=AKIAIUKI2RVHZNYW6SVQ/20231213/us-east-2/s3/aws4_request&X-Amz-Date=20231213T005608Z&X-Amz-SignedHeaders=host&X-Amz-Signature=501170f943b683ddc4a5c06a7a682e955aa1c86b5c28d1994b0a611c20f76a28
+Res: 200 https://apps.timeclockwizard.com/assets/img/avatars//avatar1/avatar_small.png?12/15/2023%203:33:59%20AM
+Res: 200 https://apps.timeclockwizard.com/assets/img/avatars//avatar4/avatar_small.png?12/15/2023%203:33:59%20AM
+Res: 200 https://fonts.gstatic.com/s/cabin/v27/u-4i0qWljRw-PfU81xCKCpdpbgZJl6Xvqdns.woff2
+Res: 200 https://fonts.gstatic.com/s/cabin/v27/u-4i0qWljRw-PfU81xCKCpdpbgZJl6Xvqdns.woff2
+Res: 200 https://fonts.gstatic.com/s/cabin/v27/u-4i0qWljRw-PfU81xCKCpdpbgZJl6Xvqdns.woff2
+Res: 200 https://fonts.gstatic.com/s/opensans/v40/memvYaGs126MiZpBA-UvWbX2vVnXBbObj2OVTS-muw.woff2
+Res: 200 https://fonts.gstatic.com/s/cabin/v27/u-4i0qWljRw-PfU81xCKCpdpbgZJl6Xvqdns.woff2
+Res: 200 https://fonts.gstatic.com/s/opensans/v40/memvYaGs126MiZpBA-UvWbX2vVnXBbObj2OVTS-muw.woff2
+Res: 200 https://apps.timeclockwizard.com/img/logo.png
+Res: 200 https://apps.timeclockwizard.com/img/head_pending_normal.svg
+Res: 200 https://apps.timeclockwizard.com/img/user_add_normal.svg
+Res: 200 https://apps.timeclockwizard.com/img/head_help_normal_1.svg
+Res: 206 https://apps.timeclockwizard.com/video/converted_video.mp4
+Res: 200 https://apps.timeclockwizard.com/bundles/en-usjs?v=25.87
+Res: 200 https://apps.timeclockwizard.com/bundles/jquery?v=25.87
+Res: 200 https://apps.timeclockwizard.com/img/add_task_normal.svg
+Res: 200 https://apps.timeclockwizard.com/img/graph_lines_icon.svg
+Res: 200 https://apps.timeclockwizard.com/img/graph_bars_icon.svg
+Res: 200 https://apps.timeclockwizard.com/img/livestream_close.svg
+Res: 200 https://apps.timeclockwizard.com/img/loader3.gif
+Res: 200 https://apps.timeclockwizard.com/bundles/QuickAccountOldSignup?v=25.87
+Res: 200 https://apps.timeclockwizard.com/bundles/AddEditTask?v=25.87
+Res: 200 https://apps.timeclockwizard.com/bundles/unobtrusive-ajaxjs?v=25.87
+Res: 200 https://apps.timeclockwizard.com/bundles/_LayoutCshtml?v=25.87
+Res: 200 https://apps.timeclockwizard.com/bundles/_PartialPageHeader?v=25.87
+Res: 200 https://apps.timeclockwizard.com/bundles/morrisandraphael?v=25.87
+Res: 200 https://calendly.com/timeclocksupport/30min
+Res: 200 https://apps.timeclockwizard.com/bundles/_PartialautoNumeric?v=25.87
+Res: 200 https://apps.timeclockwizard.com/bundles/unobtrusive?v=25.87
+Res: 200 https://apps.timeclockwizard.com/bundles/LayoutScripts?v=25.87
+Res: 200 https://apps.timeclockwizard.com/bundles/cloverjs?v=25.87
+Res: 200 https://apps.timeclockwizard.com/bundles/execupayjs?v=25.87
+Res: 200 https://apps.timeclockwizard.com/ClockIn/GetUserStatusWithTime?IsFromDashboard=true&_=1702632845742
+Res: 200 https://apps.timeclockwizard.com/img/sidebar_menu_arr.svg
+Res: 200 https://cdn.livechatinc.com/tracking.js
+Res: 204 https://apps.timeclockwizard.com/cdn-cgi/rum?
+Res: 200 https://apps.timeclockwizard.com/Home/GetNotificationDetails/
+Res: 200 https://apps.timeclockwizard.com/Common/SetVariable
+Res: 200 https://api.livechatinc.com/v3.6/customer/action/get_dynamic_configuration?license_id=1193751&client_id=c5e4f61e1a6c3b1521b541bc5c5a2ac5&url=https%3A%2F%2Fapps.timeclockwizard.com%2F&channel_type=code&jsonp=__3yi3ltlnktg
+Res: 200 https://api.livechatinc.com/v3.4/customer/action/get_configuration?organization_id=4052868d-41ae-48b4-ac57-d866f0e775f5&version=14755.9.11.598.44.79.46.13.8.5.6.11.68&group_id=0&jsonp=__lc_static_config
+Res: 200 https://api.livechatinc.com/v3.4/customer/action/get_localization?organization_id=4052868d-41ae-48b4-ac57-d866f0e775f5&version=075b79d72a19c7c515c01775c17428ae_ee47ca10599fcdb01196516c2e53cdf8&language=en&group_id=0&jsonp=__lc_localization
+Res: 200 https://apps.timeclockwizard.com/Common/PageTutorial/
+Res: 200 https://apps.timeclockwizard.com/img/vidoe_img.jpg
+Res: 200 https://apps.timeclockwizard.com/img/video_Pointer.png
+Res: 200 https://apps.timeclockwizard.com/img/video-clip-3.svg
+Res: 200 https://apps.timeclockwizard.com/img/video_folder.svg
+Res: 200 https://secure.livechatinc.com/customer/action/open_chat?license_id=1193751&group=0&embedded=1&widget_version=3&unique_groups=0
+Res: 200 https://img.youtube.com/vi/q4bjGfKchBc/maxresdefault.jpg
+Res: 200 https://apps.timeclockwizard.com/Addons/GetAddonsStatusForClient/
+Res: 200 https://apps.timeclockwizard.com/Home/GetDashbooardIntroStatus
+Res: 200 https://apps.timeclockwizard.com/Home/GetSignupQueryStringURL/
