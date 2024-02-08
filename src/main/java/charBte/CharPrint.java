@@ -13,6 +13,9 @@ public class CharPrint {
 		for (int k = 0; k < 200; k++) {
 			System.out.print((char) (o + k));
 		}
+		
+		System.out.println();
+		System.out.println("\u2578");
 	}
 
 }
