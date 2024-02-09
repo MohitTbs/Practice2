@@ -1,6 +1,7 @@
 package sendmail;
 
 import java.util.Properties;
+/*
 import javax.activation.DataHandler;
 import javax.activation.DataSource;
 import javax.activation.FileDataSource;
@@ -16,12 +17,12 @@ import javax.mail.internet.InternetAddress;
 import javax.mail.internet.MimeBodyPart;
 import javax.mail.internet.MimeMessage;
 import javax.mail.internet.MimeMultipart;
-
+*/
 
 
 public class MonitoringMail
 {
-	
+	/*
 	public void sendMail(String mailServer, String from, String[] to, String subject, String messageBody, String attachmentPath, String attachmentName) throws MessagingException, AddressException
 	{
 		boolean debug = false;
@@ -99,5 +100,6 @@ public class MonitoringMail
 	        return new PasswordAuthentication(username, password);
 	    }
 	}
+	*/
 	
 }
