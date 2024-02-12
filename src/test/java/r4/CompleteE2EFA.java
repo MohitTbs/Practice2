@@ -2,6 +2,7 @@ package r4;
 
 import java.time.Duration;
 import java.util.List;
+import java.util.Random;
 import java.util.Set;
 
 import org.openqa.selenium.By;
@@ -24,6 +25,7 @@ public class CompleteE2EFA {
 		String frontAppHomeWindow = "";
 		String frontAppUploadWindow;
 		String errMsg = "";
+		String patientId = "PRE377431";
 
 		boolean flag = false;
 		boolean result = false;
@@ -33,7 +35,7 @@ public class CompleteE2EFA {
 		driver.manage().window().maximize();
 		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(15));
 		Actions action = new Actions(driver);
-		JavascriptExecutor js1 = (JavascriptExecutor)driver;
+		JavascriptExecutor js1 = (JavascriptExecutor) driver;
 
 		try {
 			driver.get("https://staging-precise.radflow360.com/");
@@ -50,14 +52,15 @@ public class CompleteE2EFA {
 
 			// Searching for Patient
 			WebElement patientIdField = driver.findElement(By.xpath("(//*[@placeholder='Patient ID'])[1]"));
-			patientIdField.sendKeys("PRE377431");
+			patientIdField.sendKeys(patientId);
 			WebElement searchBtn = driver.findElement(By.xpath("(//*[@class='btn btn-theme'])[1]"));
-			//action.moveToElement(searchBtn).click();
-			//searchBtn.click();
+			// action.moveToElement(searchBtn).click();
+			// searchBtn.click();
 			js1.executeScript("arguments[0].click();", searchBtn);
 			Thread.sleep(6000);
 
-			WebElement patientIdRecord = driver.findElement(By.xpath("(//*[@class='cursor-pointer link-btn'])[1]"));
+			WebElement patientIdRecord = driver.findElement(
+					By.xpath("(//*[@class='cursor-pointer link-btn' and text() = '" + patientId + "'])[1]"));
 			patientIdRecord.click();
 			Thread.sleep(5000);
 			preciseWindow = driver.getWindowHandle();
@@ -72,7 +75,26 @@ public class CompleteE2EFA {
 			Select selectDrpDwn = new Select(pi_billingDrpDwn);
 			selectDrpDwn.selectByVisibleText("PI - Billing");
 			WebElement sendTotextBox = driver.findElement(By.xpath("//*[@formcontrolname='attorneyEmail']"));
-			sendTotextBox.sendKeys("test@gmail.com");
+			
+			//Generate RandomMail  -- Starts
+			
+		    int leftLimit = 97; // letter 'a'
+		    int rightLimit = 122; // letter 'z'
+		    int targetStringLength = 10;
+		    Random random = new Random();
+		    StringBuilder buffer = new StringBuilder(targetStringLength);
+		    for (int i = 0; i < targetStringLength; i++) {
+		        int randomLimitedInt = leftLimit + (int) 
+		          (random.nextFloat() * (rightLimit - leftLimit + 1));
+		        buffer.append((char) randomLimitedInt);
+		    }
+		    String generatedString = buffer.toString();
+			String randomMailGenerated = generatedString+"@gmail.com";
+			
+			//----------Generate Random Mail ends
+			
+			
+			sendTotextBox.sendKeys(randomMailGenerated);
 			WebElement subField = driver.findElement(By.xpath("(//*[@formcontrolname='subject'])[1]"));
 			subField.clear();
 			subField.sendKeys("TestDemo Rad PSL Tech PSL");
@@ -109,8 +131,7 @@ public class CompleteE2EFA {
 			 */
 			inputFile
 					.sendKeys(System.getProperty("user.dir") + "\\uploadFiles\\demoTestupload\\PRE377431_Tech_PSL.pdf");
-			inputFile
-					.sendKeys(System.getProperty("user.dir") + "\\uploadFiles\\demoTestupload\\PRE377431_Rad_PSL.pdf");
+			inputFile.sendKeys(System.getProperty("user.dir") + "\\uploadFiles\\demoTestupload\\PRE377431_Rad_PSL.pdf");
 			Thread.sleep(2000);
 			WebElement submitBtn = driver
 					.findElement(By.xpath("//div[@id='front-email-modal']//button[@type='submit']"));
@@ -126,7 +147,7 @@ public class CompleteE2EFA {
 			}
 
 		} catch (Exception e) {
-			
+
 			e.printStackTrace();
 			errMsg = e.getMessage().toString() + "\n";
 		}
@@ -172,7 +193,7 @@ public class CompleteE2EFA {
 				pluginBtn = driver
 						.findElement(By.xpath("//div[contains(@class,'entryPointSwitcherItem__') and text() = 'D']"));
 				pluginBtn.click();
-				Thread.sleep(10000); // Need 150000 Seconds
+				Thread.sleep(15000); // Need 150000 Seconds
 				String frontAppMailPage = driver.getWindowHandle();
 
 				// Clicking on the Send Mail to
@@ -181,7 +202,7 @@ public class CompleteE2EFA {
 				WebElement senFilesTo360Btn = driver.findElement(By.id("sendlien"));
 				senFilesTo360Btn.click();
 
-				Thread.sleep(20000); // Need 250000 Seconds
+				Thread.sleep(25000); // Need 250000 Seconds
 
 				Set<String> windowHandles2 = driver.getWindowHandles();
 				// String uploadReplyFrontPage;
@@ -191,23 +212,51 @@ public class CompleteE2EFA {
 				for (String singleWindow : windowHandles2) {
 
 					if (!singleWindow.equalsIgnoreCase(frontAppMailPage)
-							&& !singleWindow.equalsIgnoreCase(frontAppHomeWindow)) {
+							&& !singleWindow.equalsIgnoreCase(preciseWindow)) {
 						frontAppUploadWindow = singleWindow;
 						driver.switchTo().window(frontAppUploadWindow);
 					}
 				}
 
+				List<WebElement> listOfPatientIds = driver
+						.findElements(By.xpath("(//div[@class='user-table-block'])[2]//tbody/tr/td[3]/input"));
+				List<WebElement> listOfDocTypes = driver
+						.findElements(By.xpath("(//div[@class='user-table-block'])[2]//tbody/tr/td[4]/select"));
+				List<WebElement> listOfCheckBoxes = driver.findElements(
+						By.xpath("(//div[@class='user-table-block'])[2]//tbody/tr/td[1]//input[@type='checkbox']"));
+
+				for (int k = 0; k < listOfPatientIds.size(); k++) {
+					String patientIdText = listOfPatientIds.get(k).getAttribute("value");
+					Select selectDocType = new Select(listOfDocTypes.get(k));
+
+					WebElement selectedDoc = selectDocType.getFirstSelectedOption();
+					String selectedDocText = selectedDoc.getText();
+					System.out.println(patientIdText+"   "+ selectedDocText);
+
+					if (patientIdText.trim().equalsIgnoreCase(patientId)
+							&& (selectedDocText.trim().equalsIgnoreCase("TECH Patient Signed Lien")
+									|| selectedDocText.trim().equalsIgnoreCase("RAD Patient Signed Lien"))) {
+						//listOfCheckBoxes.get(k).click();
+						System.out.println("Inside CheckBoxes");
+						action.moveToElement(listOfCheckBoxes.get(k)).click(listOfCheckBoxes.get(k)).build().perform();
+					}
+				}
+
+				// *************************
+				/*
 				WebElement fileNameCheckbox = driver
 						.findElement(By.xpath("//input[@class='label-info check-box pointer']"));
 				fileNameCheckbox.click();
+				*/
 				Thread.sleep(2000);
 
 				WebElement uploadAndReplyLiensBtn = driver.findElement(By.cssSelector("#sendliensdemo"));
-				uploadAndReplyLiensBtn.click();
+				action.moveToElement(uploadAndReplyLiensBtn).click().build().perform();
 				WebElement successMshToUpload = driver.findElement(By.xpath("//div[@claSS='success-msg']"));
 				Thread.sleep(10000);
 				boolean succMsgFlag = successMshToUpload.isDisplayed();
 				flag2 = true;
+				// **************************************
 			}
 
 		} catch (Exception e) {
@@ -224,13 +273,14 @@ public class CompleteE2EFA {
 
 				// Deleting the Doc uploaded from Front to Precise
 				WebElement patientIdField = driver.findElement(By.xpath("(//*[@placeholder='Patient ID'])[1]"));
-				patientIdField.sendKeys("PRE377431");
+				patientIdField.sendKeys(patientId);
 				WebElement searchBtn = driver.findElement(By.xpath("(//*[@class='btn btn-theme'])[1]"));
 				js1.executeScript("arguments[0].click();", searchBtn);
-				//searchBtn.click();
+				// searchBtn.click();
 				Thread.sleep(6000);
 
-				WebElement patientIdRecord = driver.findElement(By.xpath("(//*[@class='cursor-pointer link-btn'])[1]"));
+				WebElement patientIdRecord = driver.findElement(
+						By.xpath("(//*[@class='cursor-pointer link-btn' and text() = '" + patientId + "'])[1]"));
 				patientIdRecord.click();
 				Thread.sleep(5000);
 
@@ -239,16 +289,17 @@ public class CompleteE2EFA {
 				docTab.click();
 				Thread.sleep(5000);
 
-				List<WebElement> fileNameListElement = driver
-						.findElements(By.xpath("//span[@class='dx-filemanager-details-item-name']/ancestor::tr[contains(@class,'dx-row dx-data-row')]/td[3]"));
+				List<WebElement> fileNameListElement = driver.findElements(By.xpath(
+						"//span[@class='dx-filemanager-details-item-name']/ancestor::tr[contains(@class,'dx-row dx-data-row')]/td[3]"));
 				List<WebElement> checkBoxesListtElement = driver.findElements(By.xpath(
 						"//span[@class='dx-filemanager-details-item-name']/ancestor::tr[contains(@class,'dx-row dx-data-row')]/td[1]"));
-				
+
 				boolean isDeleted = false;
 				for (int i = 0; i < fileNameListElement.size(); i++) {
 
 					String fileName = fileNameListElement.get(i).getText();
-					if (fileName.trim().equalsIgnoreCase("Rad Patient Signed Lien") || fileName.trim().equalsIgnoreCase("TECH Patient Signed Lien")) {
+					if (fileName.trim().equalsIgnoreCase("Rad Patient Signed Lien")
+							|| fileName.trim().equalsIgnoreCase("TECH Patient Signed Lien")) {
 						checkBoxesListtElement.get(i).click();
 						isDeleted = true;
 						result = true;
@@ -256,20 +307,21 @@ public class CompleteE2EFA {
 				}
 
 				Thread.sleep(1000);
-				if(isDeleted) {
-				WebElement deleteBtn = driver.findElement(By.xpath("//span[text()='Delete Selected Files']"));
-				deleteBtn.click();
+				if (isDeleted) {
+					WebElement deleteBtn = driver.findElement(By.xpath("//span[text()='Delete Selected Files']"));
+					deleteBtn.click();
+
+					WebElement deleteConfBtn = driver
+							.findElement(By.xpath("//div[@id='deleteItemConfirmPopUp']//*[text() = 'Ok']"));
+					deleteConfBtn.click();
+
+					// Toast Message
+					WebElement toastMessage = driver.findElement(By.id("toast-container"));
+					boolean isVisible = toastMessage.isDisplayed();
+					System.out.println(isVisible);
 				}
 				Thread.sleep(1000);
 
-				WebElement deleteConfBtn = driver
-						.findElement(By.xpath("//div[@id='deleteItemConfirmPopUp']//*[text() = 'Ok']"));
-				deleteConfBtn.click();
-
-				// Toast Message
-				WebElement toastMessage = driver.findElement(By.id("toast-container"));
-				boolean isVisible = toastMessage.isDisplayed();
-				System.out.println(isVisible);
 			}
 		} catch (Exception e) {
 
@@ -283,18 +335,22 @@ public class CompleteE2EFA {
 				driver.switchTo().window(frontAppHomeWindow);
 
 				//// Now Deleting the Mail from Front App
-				
-				  
-				  
-				  WebElement threeDotsMenu = driver.findElement(By.xpath(
-				  "(//div[contains(@class,'messageViewerMore_')]/div/div/div/div)[last()]"));
-				  threeDotsMenu.click(); Thread.sleep(2000); WebElement DeleteMailBtn =
-				  driver.findElement(By.
-				  xpath("//div[contains(@class,'dropdownItemContent') and text() = 'Delete']"))
-				  ; DeleteMailBtn.click(); Thread.sleep(2000); WebElement deleteConfirmBtn =
-				  driver.findElement(By.xpath("//div[contains(@class,'buttonContent_') and text() = 'Delete']"));
-				  deleteConfirmBtn.click();
-				 
+
+				WebElement threeDotsMenu = driver.findElement(
+						By.xpath("(//div[contains(@class,'messageViewerMore_')]/div/div/div/div)[last()]"));
+				threeDotsMenu.click();
+				Thread.sleep(2000);
+				WebElement DeleteMailBtn = driver
+						.findElement(By.xpath("//div[contains(@class,'dropdownItemContent') and text() = 'Delete']"));
+				DeleteMailBtn.click();
+				Thread.sleep(2000);
+//				WebElement deleteConfirmBtn = driver
+//						.findElement(By.xpath("//div[contains(@class,'buttonContent_') and text() = 'Delete']"));
+				WebElement deleteConfirmBtn = driver
+				.findElement(By.xpath("//*[text() = 'Delete conversation']"));
+
+				deleteConfirmBtn.click();
+
 			}
 
 		} catch (Exception e) {
@@ -318,7 +374,6 @@ public class CompleteE2EFA {
 
 			e.printStackTrace();
 
-			
 		}
 	}
 }
