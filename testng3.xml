@@ -7,7 +7,7 @@
 
 	<test name="SendMail">
 		<classes>
-			<class name="sendmail.App" />
+			<class name="r4.ProdCompleteE2EFA2" />
 		</classes>
 	</test>
 
