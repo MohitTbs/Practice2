@@ -76,7 +76,7 @@
 		</dependency>
 
 		<!-- https://mvnrepository.com/artifact/com.sun.mail/javax.mail -->
-<!--		<dependency>
+		<!--		<dependency>
 			<groupId>com.sun.mail</groupId>
 			<artifactId>javax.mail</artifactId>
 			<version>1.6.2</version>
@@ -127,7 +127,11 @@
 			<version>2.0.1</version>
 		</dependency>
 
-
+		<dependency>
+			<groupId>io.github.deathbycaptcha</groupId>
+			<artifactId>deathbycaptcha-java-library</artifactId>
+			<version>0.43</version>
+		</dependency>
 
 	</dependencies>
 

@@ -2,6 +2,7 @@ package r4;
 
 import java.time.Duration;
 import java.util.List;
+import java.util.Map;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
@@ -11,10 +12,20 @@ import org.testng.annotations.Test;
 
 public class ProdFrontApp {
 
-	@Test
+	@Test(/*invocationCount = 15*/)
 	public void test1() throws InterruptedException {
 
-		WebDriver driver = new ChromeDriver();
+		
+		
+		ChromeDriver driver = new ChromeDriver();
+		
+		Map coordinates = Map.of(
+                "latitude", 20.3079823,
+                "longitude", -97.893803,
+                "accuracy", 1
+        );
+		
+		driver.executeCdpCommand("Emulation.setGeolocationOverride", coordinates);
 		driver.manage().window().maximize();
 		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(15));
 
@@ -48,7 +59,7 @@ public class ProdFrontApp {
 		WebElement nextBtn2 = driver.findElement(By.xpath("//span[text() = 'Next']"));
 		nextBtn2.click();
 		Thread.sleep(10000);
-
+/*
 		WebElement sharedInboxesLink = driver
 				.findElement(By.xpath("(//nav[@aria-label='Workspaces']/div[7]//div[text() = 'Shared inboxes'])[2]"));
 		sharedInboxesLink.click();
@@ -76,5 +87,6 @@ public class ProdFrontApp {
 		WebElement draftMsg = driver.findElement(By.xpath("//*[text() = 'Personal draft']"));
 
 		System.out.println(draftMsg.isDisplayed());
+*/
 	}
 }
