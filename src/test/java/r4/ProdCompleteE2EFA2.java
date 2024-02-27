@@ -30,6 +30,7 @@ public class ProdCompleteE2EFA2 {
 		boolean flag = false;
 		boolean result = false;
 		boolean flag2 = false;
+		boolean deleteMsgFromFrontApp = false;
 
 		WebDriver driver = new ChromeDriver();
 		driver.manage().window().maximize();
@@ -155,7 +156,6 @@ public class ProdCompleteE2EFA2 {
 
 			if (flag) {
 				driver.switchTo().newWindow(WindowType.TAB);
-				
 
 				driver.get("https://front.com/");
 				frontAppHomeWindow = driver.getWindowHandle();
@@ -193,6 +193,7 @@ public class ProdCompleteE2EFA2 {
 					String subText = e.getText();
 					if (subText.contains("TestDemo Rad PSL")) {
 						e.click();
+						deleteMsgFromFrontApp = true;
 						break;
 					}
 				}
@@ -207,7 +208,7 @@ public class ProdCompleteE2EFA2 {
 						.findElement(By.xpath("//div[text()='Radflow 360 Plugin']/preceding-sibling::div"));
 				radflow360Plugin.click();
 				Thread.sleep(30000); // Need 150000 Seconds
-				//String frontAppMailPage = driver.getWindowHandle();
+				// String frontAppMailPage = driver.getWindowHandle();
 
 				// Clicking on the Send Mail to
 				WebElement pluginFrame = driver.findElement(By.xpath("//iframe[@title='Radflow 360 Plugin']"));
@@ -218,7 +219,6 @@ public class ProdCompleteE2EFA2 {
 				Thread.sleep(30000); // Need 250000 Seconds
 
 				Set<String> windowHandles2 = driver.getWindowHandles();
-				
 
 				// Switching to uploadReplyFrontPage
 
@@ -241,12 +241,14 @@ public class ProdCompleteE2EFA2 {
 						.findElements(By.xpath("(//div[@class='user-table-block'])[2]//tbody/tr/td[1]/div/input"));
 
 				for (int i = 0; i < listOfFileName.size(); i++) {
-					if(listOfFileName.get(i).getAttribute("value").contains("rad_psl") && listOfFileName.get(i).getAttribute("value").toLowerCase().contains(patientId.toLowerCase()) ) {
+					if (listOfFileName.get(i).getAttribute("value").contains("rad_psl") && listOfFileName.get(i)
+							.getAttribute("value").toLowerCase().contains(patientId.toLowerCase())) {
 						listOfPatientIds.get(i).clear();
 						listOfPatientIds.get(i).sendKeys(patientId);
 						Select s1 = new Select(listOfDocTypes.get(i));
 						s1.selectByVisibleText("RAD Patient Signed Lien");
-					} else if(listOfFileName.get(i).getAttribute("value").contains("tech_psl") && listOfFileName.get(i).getAttribute("value").toLowerCase().contains(patientId.toLowerCase())) {
+					} else if (listOfFileName.get(i).getAttribute("value").contains("tech_psl") && listOfFileName.get(i)
+							.getAttribute("value").toLowerCase().contains(patientId.toLowerCase())) {
 						listOfPatientIds.get(i).clear();
 						listOfPatientIds.get(i).sendKeys(patientId);
 						Select s2 = new Select(listOfDocTypes.get(i));
@@ -360,7 +362,7 @@ public class ProdCompleteE2EFA2 {
 
 		try {
 
-			if (flag) {
+			if (flag && deleteMsgFromFrontApp) {
 				driver.switchTo().window(frontAppHomeWindow);
 
 				// Deleting the Mail from Front App
