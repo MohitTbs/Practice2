@@ -73,6 +73,16 @@ public class DBTestingUpdate {
 			
 			affectedRows =stmt.executeUpdate(q);
 			*/
+			
+			//---- Delete Statement-------------------------------//
+			/*
+			String q = "Delete from PersonDetails Where id = 6";
+			Statement stmt = con.createStatement();
+			
+			affectedRows =stmt.executeUpdate(q);
+			System.out.println(affectedRows);
+			*/
+			
 			con.close();
 
 		} catch (Exception e) {
